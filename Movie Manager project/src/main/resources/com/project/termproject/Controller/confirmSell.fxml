@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane expanded="true" prefHeight="282.0" prefWidth="630.0" styleClass="dialog" stylesheets="@../css/LoginPageStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.termproject.Controller.ControllerOfConfirmationSell">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="242.0" prefWidth="610.0" style="-fx-background-color: #303030;">
+         <children>
+            <Label fx:id="movieName" contentDisplay="CENTER" layoutX="56.0" layoutY="36.0" prefHeight="60.0" prefWidth="557.0" text="RE:Zero" textAlignment="CENTER">
+               <font>
+                  <Font name="Agency FB Bold" size="48.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="0.75" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="name1" contentDisplay="CENTER" layoutX="56.0" layoutY="91.0" prefHeight="56.0" prefWidth="524.0" text="Are you sure you want to sell this movie? This cannot be undone." wrapText="true">
+               <font>
+                  <Font name="Agency FB Bold" size="23.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.24644549763033174" startY="0.24644549763033174">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.9210526347160339" green="0.7011655569076538" blue="0.1449805051088333" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="name11" contentDisplay="CENTER" layoutX="59.0" layoutY="138.0" prefHeight="56.0" prefWidth="100.0" text="Sell To: " wrapText="true">
+               <font>
+                  <Font name="Agency FB Bold" size="25.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.24644549763033174" startY="0.24644549763033174">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.9210526347160339" green="0.7011655569076538" blue="0.1449805051088333" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <TextField fx:id="destField" layoutX="157.0" layoutY="143.0" prefHeight="39.0" prefWidth="196.0" promptText="Production Company" styleClass="text-field2" stylesheets="@../css/LoginPageStyle.css">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <Label fx:id="errorLabel" contentDisplay="CENTER" layoutX="59.0" layoutY="190.0" prefHeight="42.0" prefWidth="295.0" text="Please insert a valid number" textFill="#e84848" visible="false" wrapText="true">
+               <font>
+                  <Font name="Agency FB Bold" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="cancelButton" layoutX="510.0" layoutY="189.0" onAction="#cancel" prefHeight="47.0" prefWidth="91.0" styleClass="grey-button" stylesheets="@../css/LoginPageStyle.css" text="Cancel">
+               <font>
+                  <Font name="Agency FB Bold" size="24.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.24644549763033174" startY="0.24644549763033174">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.9200000166893005" green="0.14720000326633453" blue="0.14720000326633453" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="sellButton" layoutX="409.0" layoutY="189.0" onAction="#sell" prefHeight="47.0" prefWidth="91.0" styleClass="grey-button" stylesheets="@../css/LoginPageStyle.css" text="Sell">
+               <font>
+                  <Font name="Agency FB Bold" size="24.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.24644549763033174" startY="0.24644549763033174">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.9200000166893005" green="0.14720000326633453" blue="0.14720000326633453" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+         </children>
+      </AnchorPane>
+   </content>
+</DialogPane>

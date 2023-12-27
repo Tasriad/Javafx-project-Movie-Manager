@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="550.0" style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.termproject.Controller.ControllerOfMovieBox">
+   <children>
+      <Label fx:id="movieName" layoutX="47.0" layoutY="13.0" prefHeight="43.0" prefWidth="302.0" text="Re:Zero">
+         <font>
+            <Font name="Agency FB Bold" size="28.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.7630331753554502">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.684719979763031" green="0.8100000023841858" blue="0.3564000129699707" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="productionCompanyName" layoutX="47.0" layoutY="46.0" prefHeight="43.0" prefWidth="302.0" text="White Fox">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.14691943127962082" startY="0.08056872037914692">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3381457030773163" green="0.6090958118438721" blue="0.8026315569877625" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.05033557046979865">
+                     <color>
+                        <Color red="0.3381457030773163" green="0.6090958118438721" blue="0.8026315569877625" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="sellButton" layoutX="392.0" layoutY="39.0" onAction="#sell" prefHeight="20.0" prefWidth="63.0" styleClass="grey-button" stylesheets="@../css/LoginPageStyle.css" text="Sell" textFill="#ffee00">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="detailsButton" layoutX="465.0" layoutY="39.0" onAction="#details" prefHeight="31.0" prefWidth="73.0" styleClass="grey-button" stylesheets="@../css/LoginPageStyle.css" text="Details" textFill="#ffee00">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

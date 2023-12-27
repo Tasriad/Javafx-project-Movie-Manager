@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1130.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.termproject.Controller.ControllerOfProductionCompanyPage">
+    <children>
+        <Pane layoutX="14.0" layoutY="137.0" prefHeight="700.0" prefWidth="195.0" style="-fx-background-color: #252525;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox layoutY="320.0" prefHeight="112.0" prefWidth="195.0" spacing="10.0" />
+                <Pane layoutX="-2.0" layoutY="-2.0" prefHeight="211.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="36.0" layoutY="86.0" text="MOVIE">
+                            <font>
+                                <Font name="Agency FB Bold" size="38.0" />
+                            </font>
+                     <textFill>
+                        <RadialGradient centerX="0.505524861878453" centerY="0.9644549763033176" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                        </Label>
+                        <Label layoutX="36.0" layoutY="120.0" text="DATABASE">
+                            <font>
+                                <Font name="Agency FB Bold" size="38.0" />
+                            </font>
+                     <textFill>
+                        <RadialGradient centerX="0.505524861878453" centerY="0.9644549763033176" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane layoutY="494.0" prefHeight="211.0" prefWidth="195.0">
+                    <children>
+                        <Button fx:id="logoutButton" layoutY="81.0" onAction="#logOut" prefHeight="54.0" prefWidth="195.0" styleClass="black-button" stylesheets="@../css/LoginPageStyle.css" text="Log Out" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="17.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="22.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/logOut.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+        <AnchorPane layoutX="195.0" layoutY="35.0" prefHeight="698.0" prefWidth="934.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox layoutY="133.0" prefHeight="565.0" prefWidth="643.0" AnchorPane.bottomAnchor="0.0">
+                    <children>
+                        <ScrollPane fx:id="scroll" minWidth="602.0" prefHeight="565.0" prefWidth="792.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../css/LoginPageStyle.css">
+                            <content>
+                                <GridPane fx:id="grid" prefHeight="43.0" prefWidth="601.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <padding>
+                                        <Insets bottom="10.0" left="45.0" top="10.0" />
+                                    </padding>
+                                </GridPane>
+                            </content>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </ScrollPane>
+                    </children>
+                </HBox>
+                <VBox layoutX="788.0" layoutY="192.0" prefHeight="700.0" prefWidth="291.0" style="-fx-background-color: #252525;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Pane prefHeight="109.0" prefWidth="291.0">
+                     <children>
+                        <TextField fx:id="searchField" layoutX="6.0" layoutY="7.0" onAction="#searchPressed" prefHeight="37.0" prefWidth="218.0" promptText="Search" styleClass="text-field2" stylesheets="@../css/LoginPageStyle.css">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="searchButton" layoutX="233.0" layoutY="14.0" mnemonicParsing="false" onAction="#searchPressed" prefHeight="37.0" prefWidth="52.0" styleClass="black-button" stylesheets="@../css/LoginPageStyle.css">
+                           <graphic>
+                              <ImageView fitHeight="29.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="cancelSearch" layoutX="168.0" layoutY="58.0" mnemonicParsing="false" onAction="#cancelSearchPressed" prefHeight="37.0" prefWidth="113.0" styleClass="blue-button" stylesheets="@../css/LoginPageStyle.css" text="Cancel" />
+                        <Label fx:id="min1" layoutX="84.0" layoutY="18.0" text="MIN" textFill="WHITE" />
+                        <TextField fx:id="toField" layoutX="123.0" layoutY="6.0" prefHeight="25.0" prefWidth="65.0" promptText="To" styleClass="text-field2" stylesheets="@../css/LoginPageStyle.css">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label fx:id="min2" layoutX="195.0" layoutY="19.0" text="MIN" textFill="WHITE" />
+                        <TextField fx:id="fromField" layoutX="6.0" layoutY="6.0" prefHeight="25.0" prefWidth="65.0" promptText="From" styleClass="text-field2" stylesheets="@../css/LoginPageStyle.css">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                     </children></Pane>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="146.0" text="SEARCH :" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                     <textFill>
+                        <RadialGradient centerX="0.4116022099447514" centerY="0.490521327014218" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.3806042969226837" green="0.9342105388641357" blue="0.7219948172569275" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.1812865436077118" green="0.42105263471603394" blue="0.3571150004863739" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                        </Label>
+                  <Button fx:id="BTbutton" contentDisplay="CENTER" layoutX="10.0" layoutY="101.0" onAction="#searchByTitle" prefHeight="45.0" prefWidth="336.0" styleClass="black-button" stylesheets="@../css/LoginPageStyle.css" text="By Titile" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.4116022099447514" centerY="0.490521327014218" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.3806042969226837" green="0.9342105388641357" blue="0.7219948172569275" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.23836500942707062" green="0.5657894611358643" blue="0.47847628593444824" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Button>
+                  <Button fx:id="BRYbutton" layoutX="10.0" layoutY="459.0" onAction="#searchByReleaseYear" prefHeight="45.0" prefWidth="336.0" styleClass="black-button" stylesheets="@../css/LoginPageStyle.css" text="By Release Year" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.4116022099447514" centerY="0.490521327014218" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.3806042969226837" green="0.9342105388641357" blue="0.7219948172569275" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.23196880519390106" green="0.44736841320991516" blue="0.38992851972579956" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Button>
+                  <Button fx:id="BGbutton" layoutX="10.0" layoutY="549.0" onAction="#searchByGenre" prefHeight="45.0" prefWidth="336.0" styleClass="black-button" stylesheets="@../css/LoginPageStyle.css" text="By Genre" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.4116022099447514" centerY="0.490521327014218" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.3806042969226837" green="0.9342105388641357" blue="0.7219948172569275" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.2357456088066101" green="0.3947368562221527" blue="0.3523391783237457" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Button>
+                  <Button fx:id="BRTbutton" layoutX="10.0" layoutY="504.0" onAction="#searchByRunningTime" prefHeight="45.0" prefWidth="336.0" styleClass="black-button" stylesheets="@../css/LoginPageStyle.css" text="By Running Time" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.4116022099447514" centerY="0.490521327014218" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.3806042969226837" green="0.9342105388641357" blue="0.7219948172569275" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.2357456088066101" green="0.3947368562221527" blue="0.3523391783237457" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Button>
+                        <Button fx:id="MRMbutton" onAction="#mostRecentMovies" prefHeight="45.0" prefWidth="336.0" styleClass="black-button" stylesheets="@../css/LoginPageStyle.css" text="Most Recent Movies" textAlignment="CENTER" wrapText="true">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                     <textFill>
+                        <RadialGradient centerX="0.4116022099447514" centerY="0.490521327014218" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.3806042969226837" green="0.9342105388641357" blue="0.7219948172569275" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.2357456088066101" green="0.3947368562221527" blue="0.3523391783237457" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                        </Button>
+                        <Button fx:id="MMRbutton" layoutX="10.0" layoutY="145.0" onAction="#moviesWithMaxRevenue" prefHeight="45.0" prefWidth="332.0" styleClass="black-button" stylesheets="@../css/LoginPageStyle.css" text="Movies With the Max Revenue" textAlignment="CENTER" wrapText="true">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                     <textFill>
+                        <RadialGradient centerX="0.4116022099447514" centerY="0.490521327014218" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.3806042969226837" green="0.9342105388641357" blue="0.7219948172569275" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.2357456088066101" green="0.3947368562221527" blue="0.3523391783237457" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                        </Button>
+                        <Pane prefHeight="67.0" prefWidth="146.0" />
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="64.0" prefHeight="37.0" prefWidth="146.0" text="OTHERS :" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.4116022099447514" centerY="0.490521327014218" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.2144249528646469" green="0.31319037079811096" blue="0.5263158082962036" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.5570662617683411" green="0.4627802073955536" blue="0.9342105388641357" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Label>
+                        <Button fx:id="TPbutton" layoutX="10.0" layoutY="196.0" onAction="#totalProfit" prefHeight="45.0" prefWidth="334.0" styleClass="black-button" stylesheets="@../css/LoginPageStyle.css" text="Total Profit" textAlignment="CENTER" wrapText="true">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                     <textFill>
+                        <RadialGradient centerX="0.4116022099447514" centerY="0.490521327014218" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.2144249528646469" green="0.31319037079811096" blue="0.5263158082962036" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.5570662617683411" green="0.4627802073955536" blue="0.9342105388641357" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                        </Button>
+                        <Pane layoutX="10.0" layoutY="284.0" prefHeight="66.0" prefWidth="146.0" />
+                    </children>
+                </VBox>
+                <Label fx:id="PCnameLabel" layoutX="55.0" layoutY="40.0" prefHeight="54.0" prefWidth="580.0" stylesheets="@../css/LoginPageStyle.css" text="Universal Pictures">
+                    <font>
+                        <Font name="Agency FB Bold" size="44.0" />
+                    </font>
+                </Label>
+                <Label fx:id="notFoundLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="236.0" layoutY="206.0" prefHeight="54.0" prefWidth="343.0" text="SORRY! NO MOVIE FOUND." textAlignment="CENTER" visible="false" AnchorPane.bottomAnchor="440.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="355.0" AnchorPane.topAnchor="206.0">
+                    <font>
+                        <Font name="Agency FB Bold" size="28.0" />
+                    </font>
+                </Label>
+            <Separator layoutX="55.0" layoutY="93.0" prefWidth="580.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
